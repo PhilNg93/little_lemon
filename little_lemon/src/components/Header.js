@@ -1,12 +1,10 @@
 import React from "react";
-import { useState } from "react";
 import logo from "../assets/Logo-name.svg"
 import { NavLink } from "react-router-dom";
 import { Flex, ListItem, UnorderedList, useBreakpointValue, Menu, MenuButton, MenuItem, MenuList, IconButton } from "@chakra-ui/react";
 import { HamburgerIcon } from "@chakra-ui/icons";
 
 function Header(){
-    const [isMenuOpen, setIsMenuOpen] = useState(false);
     const isMobile = useBreakpointValue({base: true, md: false});
     return (
             <Flex
@@ -26,7 +24,9 @@ function Header(){
                         aria-label="OpenMenu"
                         icon={<HamburgerIcon />}
                         variant="ghost" />
-                    <MenuList>
+                    <MenuList
+                        fontFamily="Markazi Text"
+                        color="49SE57">
                         <MenuItem><NavLink to="/">Home</NavLink></MenuItem>
                         <MenuItem><NavLink to="/about">About</NavLink></MenuItem>
                         <MenuItem><NavLink to="/reservations">Reservations</NavLink></MenuItem>
@@ -39,7 +39,8 @@ function Header(){
                     className="links"
                     p={2}
                     listStyleType="none"
-                    >
+                    fontFamily="Markazi Text"
+                    color="49SE57">
                         <ListItem display="inline-block" p={5}><NavLink to="/">Home</NavLink></ListItem>
                         <ListItem display="inline-block" p={5}><NavLink to="/about">About</NavLink></ListItem>
                         <ListItem display="inline-block" p={5}><NavLink to="/menu">Menu</NavLink></ListItem>

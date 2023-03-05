@@ -8,9 +8,11 @@ import OnlineOrder from "./routes/OnlineOrder";
 import {Route, Routes} from "react-router-dom";
 import { ChakraProvider, Text, extendTheme } from "@chakra-ui/react";
 
+
+
 const theme = extendTheme({
   fonts: {
-    heading: "Markazi",
+    heading: "Markazi Text",
     body: "Karla Regular",
   },
   colors: {

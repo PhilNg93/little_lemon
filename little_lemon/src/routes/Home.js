@@ -1,18 +1,16 @@
 import React from "react";
 import Header from "../components/Header";
-import { ChakraProvider, Flex } from "@chakra-ui/react";
+import { ChakraProvider } from "@chakra-ui/react";
+import Hero from "../components/Hero";
+import Card from "../components/Card";
 
 function Home() {
     return (
         <>
         <ChakraProvider>
             <Header />
-            <Flex
-            alignItems="center"
-            justifyContent="center"
-            paddingTop={5}>
-            <h1>Home</h1>
-            </Flex>
+            <Hero />
+            <Card />
         </ChakraProvider>
         </>
     )
